@@ -1,7 +1,7 @@
 import { MessageCircle, Menu, X } from "lucide-react";
 import { useState } from "react";
 
-const WHATSAPP_URL = "https://wa.me/62801759?text=Hola%20Bruno%2C%20me%20interesa%20una%20cotización%20para%20un%20evento";
+const WHATSAPP_URL = "https://wa.me/62801759?text=Hola%2C%20me%20interesa%20una%20cotización%20para%20un%20evento";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
