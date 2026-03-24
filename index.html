@@ -5,15 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Decoraciones Deluxe Bruno | Eventos Premium</title>
     <meta name="description" content="Decoraciones Deluxe Bruno: expertos en decoración premium para quinceañeras, bodas y eventos especiales. Solicita tu presupuesto gratis." />
-    <meta name="author" content="Decoraciones Deluxe Bruno" />
-    <meta property="og:title" content="Decoraciones Deluxe Bruno | Eventos Premium" />
-    <meta property="og:description" content="Expertos en decoración premium para quinceañeras, bodas y eventos especiales." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Iconos Lucide (Los mismos que usa Shadcn UI) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
   </head>
-
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+
+    <header>
+      <div class="container header-container">
+        <!-- CAMPO PARA TU LOGO: Guarda tu imagen en assets como "logo.png" o cambia el nombre aquí -->
+        <a href="#" class="logo-link">
+          <img src="src/logo.png" alt="Logo Decoraciones Deluxe Bruno" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+          <span class="logo-text-fallback" style="display:none">Decoraciones <span class="text-gold">Deluxe</span> Bruno</span>
+        </a>
+        <button class="menu-toggle" aria-label="Abrir menú">
+          <i data-lucide="menu"></i>
+        </button>
+        <nav id="main-nav">
+          <button class="menu-close" aria-label="Cerrar menú"><i data-lucide="x"></i></button>
+          <a href="#inicio">Inicio</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#galeria">Galería</a>
+          <a href="#contacto" class="btn-nav">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero">
+        <div class="hero-content">
+             <a href="#">
+          <img src="src/logo.png" alt="Logo Decoraciones Deluxe Bruno" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+          <span class="logo-text-fallback" style="display:none">Decoraciones <span class="text-gold">Deluxe</span> Bruno</span>
+        </a>
+          <h1>Transformamos tus sueños en <span class="italic-gold">realidad</span></h1>
+          <p>Expertos en diseño y decoración de eventos exclusivos. Hacemos que cada celebración sea inolvidable.</p>
+          <a href="#contacto" class="btn-primary">Cotizar Evento</a>
+        </div>
+      </section>
+
+      <section id="servicios">
+        <div class="container">
+          <h2 class="section-title">Nuestros Servicios</h2>
+          <div class="grid-3">
+            <div class="card">
+              <div class="card-image">
+                <img src="src/assets/gallery-1.jpg" alt="Decoración para Quinceañeras">
+              </div>
+              <div class="card-content">
+                <h3>Quinceañeras</h3>
+                <p>Magia y color para tus 15. Creamos escenarios de ensueño que marcan un antes y un después.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <img src="src/assets/service-boda.jpg" alt="Decoración para Bodas">
+              </div>
+              <div class="card-content">
+                <h3>Bodas</h3>
+                <p>Elegancia y romance inolvidable. Cada detalle diseñado para hacer tu día perfecto.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=800&auto=format&fit=crop" alt="Decoración para Eventos Especiales">
+              </div>
+              <div class="card-content">
+                <h3>Eventos Especiales</h3>
+                <p>Cumpleaños, baby showers y corporativos. Transformamos cualquier celebración en algo extraordinario.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="galeria" class="bg-darker">
+        <div class="container">
+          <h2 class="section-title">Galería Reciente</h2>
+          <div class="grid-gallery">
+            <!-- Usamos placeholders si no tienes las imágenes aún -->
+            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=600&auto=format&fit=crop" alt="Evento 1" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1470753937643-efeb931202a9?q=80&w=600&auto=format&fit=crop" alt="Evento 2" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=600&auto=format&fit=crop" alt="Evento 3" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=600&auto=format&fit=crop" alt="Evento 4" class="gallery-item">
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto">
+        <div class="container">
+          <h2 class="section-title">Contáctanos</h2>
+          <div class="contact-info" style="text-align: center; margin-bottom: 2rem;">
+            <p style="font-size: 1.2rem; color: #d4af37;">Llámanos o escríbenos al WhatsApp:</p>
+            <a href="https://wa.me/50662801759" target="_blank" class="phone-link" style="font-size: 1.5rem; font-weight: bold; color: #f5f5f5; text-decoration: none;">+506 6280-1759</a>
+          </div>
+          <div class="contact-wrapper">
+            <form class="contact-form" id="contactForm">
+              <input type="text" id="name" placeholder="Tu Nombre" required>
+              <input type="email" id="email" placeholder="Tu Email" required>
+              <select id="eventType">
+                <option value="">Tipo de Evento</option>
+                <option value="boda">Boda</option>
+                <option value="quince">Quinceañera</option>
+                <option value="otro">Otro</option>
+              </select>
+              <textarea id="message" rows="5" placeholder="Cuéntanos sobre tu evento..." required></textarea>
+              <button type="submit" class="btn-primary">Enviar Mensaje</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 Decoraciones Deluxe Bruno. Todos los derechos reservados.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="https://wa.me/50662801759" target="_blank" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
